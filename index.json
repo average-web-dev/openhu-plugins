@@ -20,8 +20,8 @@
         "org.openhu.vehicle"
       ],
       "archive": "dist/org.openhu.camera-1.0.0.tar.gz",
-      "sha256": "bc1c81d59bd42fda51e79b3740449dcca259c3901780f31cf2172daac955fbe6",
-      "size": 9319
+      "sha256": "9890b5179d5c8acc69d93122ffaa4a69aeb3459fdd760b956ab0250e1a0c8060",
+      "size": 12804
     },
     {
       "id": "org.openhu.can",
@@ -37,8 +37,8 @@
         "input"
       ],
       "archive": "dist/org.openhu.can-1.0.0.tar.gz",
-      "sha256": "85f5b01afb2928a1cb7a1ad47c0a0226d6e16c259beb91c5e828647d0727c51c",
-      "size": 14608
+      "sha256": "b5f6bef0e3e1d14d7b88911782ae5b4a4a1d3938aa5a11c150a6d41b492eee11",
+      "size": 17438
     },
     {
       "id": "org.openhu.logger",
@@ -56,8 +56,8 @@
         "org.openhu.vehicle"
       ],
       "archive": "dist/org.openhu.logger-1.0.0.tar.gz",
-      "sha256": "eb7f14aede751acfc7b56a03e7eb200b2517df8b0a673101a774f875a32b5256",
-      "size": 41080
+      "sha256": "f8daa04985083a794a6e521f4d7b467161c550810aa54449003654cc7f0655b5",
+      "size": 43984
     },
     {
       "id": "org.openhu.media",
@@ -77,8 +77,8 @@
         "python3-mutagen"
       ],
       "archive": "dist/org.openhu.media-1.0.0.tar.gz",
-      "sha256": "cd50e7b28e284c68b4a7df79ca9adf563fc5bb742aa11ed9c1d2a59de637930c",
-      "size": 74330
+      "sha256": "d71087bff3889e08b4032feab0adfb418f281770665ef3e4e840b4226926b4b1",
+      "size": 77973
     },
     {
       "id": "org.openhu.radio",
@@ -113,13 +113,13 @@
       "archives": {
         "amd64": {
           "archive": "dist/org.openhu.radio-1.0.0-amd64.tar.gz",
-          "sha256": "9172c99ac8ac3489f7f4e269004ce506bb12db9d0873f2c45977cb8e9fdd51a4",
-          "size": 527160
+          "sha256": "061dd601c3651aa743478dc4c87d67c506a6730e452fb028c2faba794af5ae7f",
+          "size": 531799
         },
         "arm64": {
           "archive": "dist/org.openhu.radio-1.0.0-arm64.tar.gz",
-          "sha256": "8971646e740dc54a14e244214cb97ea11c82e81a39c095deef843e9341f8efbd",
-          "size": 489830
+          "sha256": "cfa45abe421b98e15d501ba336fd5f837d910e0825d48099a150a25d304169ea",
+          "size": 494387
         }
       }
     },
@@ -136,8 +136,8 @@
         "input"
       ],
       "archive": "dist/org.openhu.swc-1.0.0.tar.gz",
-      "sha256": "e793f22c0d901159013772d7b9b2bf7e8ffb0fa018ab2b135f3d9a51d5d93366",
-      "size": 9690
+      "sha256": "1ca7ec17497df5871f70fd90e800e087ef5f0df83481943c771098d304541b13",
+      "size": 12556
     },
     {
       "id": "org.openhu.vehicle",
@@ -170,8 +170,8 @@
         "org.openhu.can": "1.0.0"
       },
       "archive": "dist/org.openhu.vehicle-1.0.0.tar.gz",
-      "sha256": "bb42cad837c763327e303932fa760b646007f63b6f3947b3b1e9707339a7f573",
-      "size": 7501
+      "sha256": "4156037fd2fd64ca77371a066a93ed36d6d0f736ffab079b72a85f6a09158d51",
+      "size": 10444
     }
   ]
 }

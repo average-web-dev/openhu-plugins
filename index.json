@@ -77,8 +77,8 @@
         "python3-mutagen"
       ],
       "archive": "dist/org.openhu.media-1.0.0.tar.gz",
-      "sha256": "d71087bff3889e08b4032feab0adfb418f281770665ef3e4e840b4226926b4b1",
-      "size": 77973
+      "sha256": "0a9b57412df80138853d06cd7a65d917eace65557783bb0a0cb1c5afc91fbbc7",
+      "size": 80192
     },
     {
       "id": "org.openhu.radio",
@@ -113,13 +113,13 @@
       "archives": {
         "amd64": {
           "archive": "dist/org.openhu.radio-1.0.0-amd64.tar.gz",
-          "sha256": "061dd601c3651aa743478dc4c87d67c506a6730e452fb028c2faba794af5ae7f",
-          "size": 531799
+          "sha256": "f4377e94f094999bfb91993237f5c10137f83f10b7baa4330d2acd3124759c60",
+          "size": 541939
         },
         "arm64": {
           "archive": "dist/org.openhu.radio-1.0.0-arm64.tar.gz",
-          "sha256": "cfa45abe421b98e15d501ba336fd5f837d910e0825d48099a150a25d304169ea",
-          "size": 494387
+          "sha256": "6e12d5a370c45f8c9cae1d589925966402fa2e7bd095dc928a516982e59a5ac5",
+          "size": 504398
         }
       }
     },

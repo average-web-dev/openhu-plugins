@@ -67,6 +67,10 @@
         <source></source>
         <translation>Alle Sender</translation>
     </message>
+    <message id="org.openhu.radio.main.band_stations">
+        <source></source>
+        <translation>%1-Sender</translation>
+    </message>
     <message id="org.openhu.radio.main.cancel">
         <source></source>
         <translation>Abbrechen</translation>
@@ -90,6 +94,10 @@
     <message id="org.openhu.radio.main.next_station">
         <source></source>
         <translation>Nächster Sender</translation>
+    </message>
+    <message id="org.openhu.radio.main.no_favorites">
+        <source></source>
+        <translation>Noch keine Favoriten – tippe auf das Herz eines Senders</translation>
     </message>
     <message id="org.openhu.radio.main.no_stations">
         <source></source>
@@ -123,13 +131,17 @@
         <source></source>
         <translation>Sendersuche … Kanal %1 (%2/%3), %4 Sender</translation>
     </message>
+    <message id="org.openhu.radio.main.settings">
+        <source></source>
+        <translation>Einstellungen</translation>
+    </message>
     <message id="org.openhu.radio.main.simulated_stick">
         <source></source>
         <translation>Simulierter Stick</translation>
     </message>
-    <message id="org.openhu.radio.main.stations">
+    <message id="org.openhu.radio.main.station_list">
         <source></source>
-        <translation>Sender</translation>
+        <translation>Senderliste</translation>
     </message>
     <message id="org.openhu.radio.main.step_down">
         <source></source>
@@ -143,6 +155,14 @@
         <source></source>
         <translation>Stopp</translation>
     </message>
+    <message id="org.openhu.radio.main.stopped">
+        <source></source>
+        <translation>Gestoppt</translation>
+    </message>
+    <message id="org.openhu.radio.main.tab_favorites">
+        <source></source>
+        <translation>Favoriten</translation>
+    </message>
     <message id="org.openhu.radio.name">
         <source></source>
         <translation>Radio</translation>
@@ -155,6 +175,14 @@
         <source></source>
         <translation>Versorgt eine aktive Antenne über den Stick (DAB+)</translation>
     </message>
+    <message id="org.openhu.radio.settings.columns">
+        <source></source>
+        <translation>Kacheln pro Reihe</translation>
+    </message>
+    <message id="org.openhu.radio.settings.columns.description">
+        <source></source>
+        <translation>Sender in den Tabs Favoriten, FM, AM und DAB+</translation>
+    </message>
     <message id="org.openhu.radio.settings.gain">
         <source></source>
         <translation>Empfangsverstärkung (dB)</translation>
@@ -166,6 +194,10 @@
     <message id="org.openhu.radio.settings.gain.description">
         <source></source>
         <translation>Verringern, wenn starke Sender verzerrt klingen</translation>
+    </message>
+    <message id="org.openhu.radio.settings.page">
+        <source></source>
+        <translation>Seite</translation>
     </message>
     <message id="org.openhu.radio.settings.pauseForAndroidAuto">
         <source></source>

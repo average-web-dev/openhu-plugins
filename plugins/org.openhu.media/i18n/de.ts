@@ -87,6 +87,10 @@
         <source></source>
         <translation>%1 Std. %2 Min.</translation>
     </message>
+    <message id="org.openhu.media.main.library">
+        <source></source>
+        <translation>Bibliothek</translation>
+    </message>
     <message id="org.openhu.media.main.minutes">
         <source></source>
         <translation>%1 Min.</translation>
@@ -270,6 +274,10 @@
     <message id="org.openhu.media.main.up_next">
         <source></source>
         <translation>Als Nächstes</translation>
+    </message>
+    <message id="org.openhu.media.main.up_next_again">
+        <source></source>
+        <translation>Danach erneut</translation>
     </message>
     <message id="org.openhu.media.name">
         <source></source>

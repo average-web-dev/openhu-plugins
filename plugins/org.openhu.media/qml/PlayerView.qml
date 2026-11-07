@@ -1,11 +1,12 @@
 import QtQuick
 import OpenHU 1.0
+import "../lib/qml"
 import "Music.js" as Music
-import "Placeholder.js" as Placeholder
+import "../lib/qml/Placeholder.js" as Placeholder
 
-// The player: a back chevron; on the left the cover, title, artist and source; on the right "Up next" (tap: play
-// it now, drag the handle: reorder, long press: the menu); at the bottom the seek bar across the whole width and,
-// centred, mode, previous, play/pause, next and repeat.
+// The player, the main page while there is a track: the button of the library; on the left the cover, title,
+// artist and source; on the right "Up next" (tap: play it now, drag the handle: reorder, long press: the menu); at
+// the bottom the seek bar across the whole width and, centred, mode, previous, play/pause, next and repeat.
 Item {
     id: player
 
@@ -20,7 +21,7 @@ Item {
     property string unknownArtist
     property real touch: 48
 
-    signal backClicked()
+    signal listClicked()
     signal previousClicked()
     signal toggleClicked()
     signal nextClicked()
@@ -46,10 +47,10 @@ Item {
         y: Math.round(Theme.spacing * 0.25)
         implicitWidth: player.touch
         flat: true
-        iconName: "back"
-        iconScale: 0.5
-        Accessible.name: qsTrId("org.openhu.media.main.back")
-        onClicked: player.backClicked()
+        iconName: "library"
+        iconScale: 0.46
+        Accessible.name: qsTrId("org.openhu.media.main.library")
+        onClicked: player.listClicked()
     }
 
     Item {
@@ -156,22 +157,52 @@ Item {
                 boundsBehavior: Flickable.StopAtBounds
                 interactive: true
 
-                delegate: TrackRow {
+                // with repeat the entries after the end of the list (repeat: true) follow below "Then again"
+                delegate: Column {
                     id: entry
                     required property var modelData
                     required property int index
+                    readonly property bool repeat: entry.modelData.repeat === true
                     width: ListView.view.width
-                    touch: player.touch
-                    title: entry.modelData.title || ""
-                    subtitle: entry.modelData.artist || ""
-                    cover: entry.modelData.cover || ""
-                    duration: entry.modelData.duration || 0
-                    available: entry.modelData.available !== false
-                    draggable: true
-                    onClicked: player.jumped(entry.modelData.key)
-                    onHeld: player.entryHeld(entry.modelData)
-                    onMoved: function(steps) {
-                        player.entryMoved(entry.modelData.key, Math.max(0, entry.index + steps))
+                    // a dragged row above its neighbours
+                    z: track.dragOffset !== 0 ? 2 : 0
+
+                    Row {
+                        visible: entry.repeat && (entry.index === 0 || player.upNext[entry.index - 1].repeat !== true)
+                        height: Math.round(Theme.fontSmall * 2.2)
+                        leftPadding: Math.round(Theme.spacing * 0.65)
+                        spacing: Math.round(Theme.spacing * 0.4)
+
+                        Icon {
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: Math.round(Theme.fontSmall * 1.2)
+                            height: width
+                            name: "repeat"
+                            color: Theme.textDim
+                        }
+                        Text {
+                            anchors.verticalCenter: parent.verticalCenter
+                            text: qsTrId("org.openhu.media.main.up_next_again")
+                            color: Theme.textDim
+                            font.pixelSize: Theme.fontSmall
+                        }
+                    }
+                    TrackRow {
+                        id: track
+                        width: parent.width
+                        touch: player.touch
+                        title: entry.modelData.title || ""
+                        subtitle: entry.modelData.artist || ""
+                        cover: entry.modelData.cover || ""
+                        duration: entry.modelData.duration || 0
+                        available: entry.modelData.available !== false
+                        // moving only within this pass of the list
+                        draggable: !entry.repeat
+                        onClicked: player.jumped(entry.modelData.key)
+                        onHeld: player.entryHeld(entry.modelData)
+                        onMoved: function(steps) {
+                            player.entryMoved(entry.modelData.key, Math.max(0, entry.index + steps))
+                        }
                     }
                 }
 

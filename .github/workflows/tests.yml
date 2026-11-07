@@ -21,7 +21,7 @@ jobs:
           apt-get update -qq
           DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
               python3 python3-websockets qt6-declarative-dev-tools qt6-l10n-tools qml6-module-qtquick qml6-module-qtquick-controls \
-              qml6-module-qtquick-layouts qml6-module-qtmultimedia git ca-certificates ffmpeg sox mpv python3-mutagen >/dev/null
+              qml6-module-qtquick-layouts qml6-module-qtmultimedia git ca-certificates ffmpeg sox mpv python3-mutagen unzip >/dev/null
 
       - uses: actions/checkout@v4
 
@@ -48,6 +48,13 @@ jobs:
               plugins/org.openhu.radio/tools/fake-sdr/rtl_power plugins/org.openhu.radio/tools/fake-sdr/redsea \
               plugins/org.openhu.radio/tools/fake-sdr/openhu-dab plugins/org.openhu.media/tools/fake-mpv/mpv \
               plugins/org.openhu.media/tools/make-test-music.py
+
+      # the TypeScript client common/openhu.ts (plugin programs run with bun)
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.19
+      - name: TypeScript client
+        run: bun test tests/ts
 
       # qmllint of OpenHU (Qt 6) with its OpenHU QML module; OpenHU branch of the same name, else main
       - name: QML

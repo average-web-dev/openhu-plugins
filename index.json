@@ -77,8 +77,8 @@
         "python3-mutagen"
       ],
       "archive": "dist/org.openhu.media-1.0.0.tar.gz",
-      "sha256": "0a9b57412df80138853d06cd7a65d917eace65557783bb0a0cb1c5afc91fbbc7",
-      "size": 80192
+      "sha256": "4d86483e03923c262c2064b9f3279e6b16b738306e61fa059d813b7e10745096",
+      "size": 80384
     },
     {
       "id": "org.openhu.radio",

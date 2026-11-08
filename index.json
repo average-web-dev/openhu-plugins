@@ -76,9 +76,14 @@
         "mpv",
         "python3-mutagen"
       ],
+      "androidAuto": {
+        "services": [
+          "localMedia"
+        ]
+      },
       "archive": "dist/org.openhu.media-1.0.0.tar.gz",
-      "sha256": "4d86483e03923c262c2064b9f3279e6b16b738306e61fa059d813b7e10745096",
-      "size": 80384
+      "sha256": "a91d20f49d77af7409197245e3001387234dfc4e5651c2cd23ef821838e90c3f",
+      "size": 80806
     },
     {
       "id": "org.openhu.radio",

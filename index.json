@@ -82,8 +82,8 @@
         ]
       },
       "archive": "dist/org.openhu.media-1.0.0.tar.gz",
-      "sha256": "a91d20f49d77af7409197245e3001387234dfc4e5651c2cd23ef821838e90c3f",
-      "size": 80806
+      "sha256": "b8b15ccc57b1638ff961ecd5f0a710b1e7c0a7ddfe7799bb5e8d8b3e54ff076f",
+      "size": 80858
     },
     {
       "id": "org.openhu.radio",
